@@ -17,7 +17,7 @@ $cdomainlist = Get-MsolUser |where-object {$_.UserPrincipalName -like "*demoC..c
 #Count Data
 $counta = (Get-MsolUser |where-object {$_.UserPrincipalName -like "*@demoA.com.hk"} | Select-Object Userprincipalname, Displayname, Islicensed).count
 $countb = (Get-MsolUser |where-object {$_.UserPrincipalName -like "*@demoB.com.hk"} | Select-Object Userprincipalname, Displayname, Islicensed).count
-$countc = (Get-MsolUser |where-object {$_.UserPrincipalName -like "*demoC..com.hk"} | Select-Object Userprincipalname, Displayname, Islicensed).count
+$countc = (Get-MsolUser |where-object {$_.UserPrincipalName -like "*demoC.com.hk"} | Select-Object Userprincipalname, Displayname, Islicensed).count
 
 #Set Mail 
 $From = "Sys.admin@demo.com.hk"
